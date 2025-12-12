@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PillMate - Smart Healthcare</title>
+    <meta name="description" content="PillMate - The Smart Pill Dispenser that syncs with your life." />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            colors: {
+              medical: {
+                primary: '#0e4f61', 
+                secondary: '#1a7a8f', 
+                accent: '#2ec4b6', 
+                dark: '#062b36', 
+                light: '#eefcfd', 
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-medical-light text-slate-800 antialiased flex flex-col min-h-screen" data-page="home">
+    
+    <!-- HEADER INJECTION POINT -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-white overflow-hidden pb-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                    <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <polygon points="50,0 100,0 50,100 0,100" />
+                    </svg>
+
+                    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="sm:text-center lg:text-left">
+                            <h1 id="hero-headline" class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                                <!-- JS Injected -->
+                            </h1>
+                            <p id="hero-subheadline" class="mt-4 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-medium">
+                                <!-- JS Injected -->
+                            </p>
+                            <p id="hero-description" class="mt-3 text-sm text-slate-400 sm:max-w-xl sm:mx-auto lg:mx-0">
+                                <!-- JS Injected -->
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start" id="hero-cta-container">
+                                <!-- JS Injected Buttons -->
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-medical-light">
+                <img id="hero-image" class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-90" src="" alt="Hero Image">
+                <div class="absolute inset-0 bg-medical-primary mix-blend-multiply opacity-30"></div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section class="py-24 bg-slate-50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-medical-accent/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-80 h-80 rounded-full bg-medical-primary/10 blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                    <div class="relative mb-12 lg:mb-0 group">
+                        <div class="absolute inset-0 bg-medical-primary rounded-3xl transform translate-x-4 translate-y-4 opacity-20 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img id="product-image" src="" alt="Product" class="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-105" onerror="this.src='product.svg'">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-medical-accent text-white px-6 py-4 rounded-xl shadow-lg font-bold text-lg hidden md:block animate-bounce">
+                            2 Year Warranty
+                        </div>
+                    </div>
+                    <div>
+                        <h2 id="product-title" class="text-3xl font-extrabold text-medical-primary sm:text-4xl mb-6"></h2>
+                        <p id="product-desc" class="text-lg text-slate-600 mb-8 leading-relaxed"></p>
+                        <ul id="product-features" class="space-y-4 mb-8">
+                            <!-- JS Injected Features -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base text-medical-accent font-bold tracking-wide uppercase">Capabilities</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">More than just a dispenser</p>
+                </div>
+                <div class="mt-16">
+                    <div id="features-grid" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- JS Injected Features -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="bg-medical-light/30 py-20 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-12">Trusted by Caregivers & Professionals</h2>
+                <div id="testimonials-grid" class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- JS Injected Testimonials -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="bg-medical-secondary py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-medical-primary rounded-2xl p-8 md:p-16 shadow-2xl flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Stay in the loop.</h2>
+                        <p class="mt-4 text-lg text-medical-light">Sign up for our newsletter to get the latest health tips.</p>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <form class="sm:flex" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input id="email-address" type="email" required class="w-full px-5 py-3 border border-transparent rounded-md text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-white" placeholder="Enter your email">
+                            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                                <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-medical-primary bg-medical-accent hover:bg-white transition-colors">Notify me</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER INJECTION POINT -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Scroll To Top -->
+    <button id="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-medical-primary text-white shadow-lg transition-all duration-300 opacity-0 translate-y-10 pointer-events-none hover:bg-medical-secondary">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Main Logic -->
+    <script type="module" src="./script.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

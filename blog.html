@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - PillMate</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            colors: {
+              medical: {
+                primary: '#0e4f61', 
+                secondary: '#1a7a8f', 
+                accent: '#2ec4b6', 
+                dark: '#062b36', 
+                light: '#eefcfd', 
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen" data-page="blog">
+    
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-extrabold text-slate-900 sm:text-5xl">Our Blog</h1>
+                <p class="mt-4 text-xl text-slate-500">Latest news, health tips, and product updates from PillMate.</p>
+            </div>
+
+            <!-- Dynamic Blog Grid -->
+            <div id="blog-grid" class="grid gap-12 lg:grid-cols-3 sm:max-w-none sm:grid-cols-2 max-w-lg mx-auto lg:max-w-none">
+                <!-- JS injected posts will go here -->
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    
+    <button id="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-medical-primary text-white shadow-lg transition-all duration-300 opacity-0 translate-y-10 pointer-events-none hover:bg-medical-secondary">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
